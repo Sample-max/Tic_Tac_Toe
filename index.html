@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Tic_Tac_Toe</title>
+</head>
+<body>
+  <div id="left-content">
+    <span class="logo">Tic Tac Toe</span>
+    <div id="choices">
+      <div id="card1">
+      <div class="player-picture1">
+
+      </div>
+      <h2>Player vs computer</h2>
+      </div>
+      <div id="card2">
+      <div class="player-picture2">
+
+      </div>
+      <h2>Player vs Player</h2>
+      </div>
+    </div>
+  </div>
+  <div id="main-content">
+    <div id="board">
+     <div class="box" data-row="0" data-col="0"></div>
+     <div class="box" data-row="0" data-col="1"></div>
+     <div class="box" data-row="0" data-col="2"></div>
+     <div class="box" data-row="1" data-col="0"></div>
+     <div class="box" data-row="1" data-col="1"></div>
+     <div class="box" data-row="1" data-col="2"></div>
+     <div class="box" data-row="2" data-col="0"></div>
+     <div class="box" data-row="2" data-col="1"></div>
+     <div class="box" data-row="2" data-col="2"></div>
+    </div>
+   <div id="remote">
+  <button id="start"><div class="text">Start game</div></button>
+ <button id="reset"><div class="text">Reset</div></button>
+  </div> 
+  </div>
+  <div id="right-content">
+  <div id="display">
+      <h3>Message Box <hr></h3>
+    </div>
+    <div id="gamelog">
+      <h3>Game logs<hr></h3>
+    </div>
+  </div>
+
+  <dialog id="1pDialog">
+      <form id='myForm'>
+        <h3>Fill the details</h3>
+        <input type="text" id="name"name ="Name" placeholder="Enter your name"><br>
+        <input type="number" id="choice" name="choice" placeholder="Enter 1 for O and 2 for х" min="1" max="2"><br>
+        <div>
+      <button value="cancel" formmethod="dialog">Cancel</button>
+      <button id="confirm1p" value="default">Confirm</button>
+    </div>
+    </form>
+    </dialog>
+    <dialog id="2pDialog">
+      <form id="myForm2">
+        <h3>Fill the details</h3>
+        <input type="text" id="name1"name ="Name" placeholder="Enter first player name"><br>
+        <input type="number" id="choice1" name="choice" placeholder="Enter 1 for O and 2 for х" min="1" max="2"><br>
+        <input type="text" id="name2" name="Name" placeholder="Enter second player name"><br>
+        <div>
+      <button value="cancel" formmethod="dialog">Cancel</button>
+      <button id="confirm2p" value="default">Confirm</button>
+    </div>
+    </form>
+    </dialog>
+  <script src="script.js"></script>
+</body>
+
+</html>

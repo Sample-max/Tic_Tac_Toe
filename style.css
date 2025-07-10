@@ -1,0 +1,201 @@
+@font-face {
+    font-family: 'balooregular';
+    src: url('baloo_font/baloo-regular-webfont.woff2') format('woff2'),
+         url('baloo_font/baloo-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body, html {
+    margin: 0;
+    border: 0;
+    height: 100%;
+    width: 100%;
+    background-color:#FFF59D;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    text-align: center;
+}
+.logo{
+    font-size: 70px;
+    font-weight: 1000;
+    margin:30px;
+    color: purple;
+    text-shadow: 5px 0 #fff, -5px 0 #fff, 0 5px #fff, 0 -5px #fff,
+             5px 5px #fff, -5px -5px #fff, 5px -5px #fff, -5px 5px #fff;
+    
+    font-family:'balooregular';
+    line-height: 55px;
+    width:250px;
+}
+#left-content{
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    align-items: center;
+    justify-content: center;
+}
+#main-content {
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+#board {
+    display: flex;
+    width: 588px;
+    height: 588px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+     background-image: url('images/wood-texture.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+    border: 10px solid transparent;
+    border-radius: 10px;
+    border-image: url('images/border.jpeg') 30 round;
+}
+
+.box {
+    width: 190px;
+    height: 190px;
+    border: 3px solid black;
+    transition: background-color 0.3s;
+}
+
+.box:hover {
+    cursor:grab;
+}
+#remote{
+    grid-row-start: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 10px;
+    background-color: white;
+    border-radius: 0px 0px 10px 10px;
+    width:608px;
+      background-image: url('images/border.jpeg'); /* Use your image path */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#remote button{
+    margin:20px;
+    align-self: center;
+    justify-self: start;
+    width:250px;
+    height:60px;
+    background-color: rgb(25, 146, 212);
+    color:#F0F4F8;
+    border:none;
+    border-radius: 30px;
+    font-size: 30px;
+    font-weight: 600;
+    &:hover{
+        cursor:grab;
+    }
+}
+#display, #gamelog {
+  width: 250px;
+  height: 60%;
+  padding: 16px;
+  border-radius: 12px;
+  margin: 30px;
+  font-family: monospace;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#display {
+  background-color: #81C784;
+  color: #212121;
+}
+
+#gamelog {
+  background-color: #F48FB1;
+  color: #2E2E2E;
+}
+
+h3 {
+  margin: 0 0 10px;
+  font-size: 1.2em;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  margin: 8px 0;
+}
+
+
+#card1,#card2{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    background-color:orange;
+    border:5px outset orangered;
+    border-radius:5px;
+    margin:10px 15px 20px 15px;
+    color:white;
+    font-size:20px;
+    height:200px;
+    padding:0px 5px 0px 5px;
+    &:hover{
+        cursor: grab;
+        
+    }
+}
+#choices{
+    width:200px;
+    margin:50px;
+}
+#right-content{
+    display: grid;
+    grid-template-rows: 1fr 1fr;   
+    align-items: center;
+}
+.player-picture1{
+    height:75px;
+    width:146px;
+    border:2px solid black;
+    margin-top:5px;
+    background-image: url("images/computer.png");
+    background-size: cover;
+    background-color: white;
+    background-position: center;
+  background-repeat: no-repeat;
+}
+.player-picture2{
+    height:75px;
+    width:146px;
+    border:2px solid black;
+    margin-top:5px;
+    background-image: url("images/pvp.png");
+    background-size: cover;
+    background-position: center;
+  background-repeat: no-repeat;
+}
+form input{
+  margin-left:10px;
+  margin-right: 10px;
+  display: block;
+}
+form button{
+   background: linear-gradient(135deg, #ff6a00, #ee0979);
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin:10px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+form h3{
+  margin-top:0px;
+}
+#choice,#choice1{
+  width:177px;
+}
