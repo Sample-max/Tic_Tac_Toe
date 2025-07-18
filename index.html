@@ -54,10 +54,10 @@
   <dialog id="1pDialog">
       <form id='myForm'>
         <h3>Fill the details</h3>
-        <input type="text" id="name"name ="Name" placeholder="Enter your name"><br>
-        <input type="number" id="choice" name="choice" placeholder="Enter 1 for O and 2 for х" min="1" max="2"><br>
+        <input type="text" id="name"name ="Name" placeholder="Enter your name" required><br>
+        <input type="number" id="choice" name="choice" placeholder="Enter 1 for O and 2 for х" min="1" max="2" required><br>
         <div>
-      <button value="cancel" formmethod="dialog">Cancel</button>
+      <button value="cancel" onclick="document.getElementById('1pDialog').close()" >Cancel</button>
       <button id="confirm1p" value="default">Confirm</button>
     </div>
     </form>
@@ -65,11 +65,11 @@
     <dialog id="2pDialog">
       <form id="myForm2">
         <h3>Fill the details</h3>
-        <input type="text" id="name1"name ="Name" placeholder="Enter first player name"><br>
-        <input type="number" id="choice1" name="choice" placeholder="Enter 1 for O and 2 for х" min="1" max="2"><br>
-        <input type="text" id="name2" name="Name" placeholder="Enter second player name"><br>
+        <input type="text" id="name1"name ="Name" placeholder="Enter first player name" required><br>
+        <input type="number" id="choice1" name="choice" placeholder="Enter 1 for O and 2 for х" min="1" max="2" required><br>
+        <input type="text" id="name2" name="Name" placeholder="Enter second player name" required><br>
         <div>
-      <button value="cancel" formmethod="dialog">Cancel</button>
+      <button type="submit"value="cancel" onclick="document.getElementById('2pDialog').close()" >Cancel</button>
       <button id="confirm2p" value="default">Confirm</button>
     </div>
     </form>

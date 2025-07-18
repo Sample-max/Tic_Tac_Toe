@@ -76,7 +76,10 @@ startbtn.disabled=true;
     if (!name || (choice !== 1 && choice !== 2)) {
       if(display.children.length>7)
       deleteExtramessage(display);
-      const msg=document.createElement('p');
+      
+       if(display.children.length>5)
+      deleteExtramessage(display);
+    const msg=document.createElement('p');
     msg.textContent="Please enter valid name and choice (1 or 2)";
     display.appendChild(msg);
       return;
@@ -172,7 +175,7 @@ const TurnCheck = () => {
  const SetValue = (row, column) => {
   const msg=document.createElement('p');
   if (gameOver||gameboard[row][column] !== 0) {
-    if(display.children.length>7)
+    if(display.children.length>5)
    deleteExtramessage(display);
     msg.textContent = gameOver ? "Game is over." : "Invalid move. Spot already taken.";
     display.appendChild(msg);
